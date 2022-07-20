@@ -89,3 +89,8 @@
 .passform__btn + .passform__btn {
   margin-left: 25px;
 }
+.passform__length {
+  padding: 25px 30px;
+  width: 95px;
+  font-size: 1.5rem;
+}

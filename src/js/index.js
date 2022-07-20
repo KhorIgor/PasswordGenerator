@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     specialCheck = document.querySelector(
       ".passform__input__includeSpecialSym"
     ),
-    copyBtn = document.querySelector(".passform__copy");
+    copyBtn = document.querySelector(".passform__copy"),
+    lengthInput = document.querySelector(".passform__length");
 
   function generatePassword() {
     let password,
@@ -93,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     passInput.value = password.substring(0, length);
   }
-
+  lengthInput.value = range.value;
   btn.addEventListener("click", generatePassword);
   lettersCheck.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -138,4 +139,9 @@ document.addEventListener("DOMContentLoaded", () => {
     passInput.select();
     passInput.setSelectionRange(0, 0);
   });
+  range.addEventListener("change", () => (lengthInput.value = range.value));
+  lengthInput.addEventListener(
+    "input",
+    () => (range.value = lengthInput.value)
+  );
 });
