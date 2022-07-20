@@ -1,0 +1,91 @@
+.passform__wrapper {
+  padding: 20px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+}
+.passform__input {
+  padding: 25px;
+  width: 100%;
+  max-width: 550px;
+  font-size: 1.5rem;
+}
+
+.passform__btn {
+  background-color: var(--accent-color);
+  padding: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.passform__btn:hover {
+  background-color: var(--accent-color-lighter);
+}
+.passform__chboxes__wrapper {
+  padding: 50px;
+}
+.passform__chboxes__container {
+  position: relative;
+  display: block;
+  padding: 20px 40px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.passform__chboxes__wrapper input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.passform__chboxes__container {
+  padding-left: 77px;
+}
+.passform__chboxes__container:hover {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.passform__chboxes__container:hover input ~ .passform__check {
+  background-color: #ccc;
+}
+.passform__chboxes__container input:checked ~ .passform__check {
+  background-color: #2196f3;
+}
+.passform__chboxes__container input:checked ~ .passform__check:after {
+  display: block;
+}
+.passform__chboxes__container input:disabled ~ .passform__check,
+.passform__chboxes__container input:disabled ~ .passform__check:after {
+  opacity: 0.2;
+}
+.passform__check {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #aaa;
+}
+.passform__check::after {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg) translate(-90%, -25%);
+  -ms-transform: rotate(45deg) translate(-90%, -25%);
+  transform: rotate(45deg) translate(-90%, -25%);
+}
+.passform__btns__wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+.passform__btn + .passform__btn {
+  margin-left: 25px;
+}

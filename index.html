@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="src/css/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main class="main">
+      <section class="section section__passform">
+        <div class="container">
+          <h3>Make you own password</h3>
+          <div class="passform__wrapper">
+            <input class="passform__input" type="text" />
+
+            <input
+              class="passform__input__range"
+              type="range"
+              min="1"
+              max="50"
+            />
+            <div class="passform__chboxes__wrapper">
+              <label class="passform__chboxes__container" for="">
+                Include Letters a,b,c,d,e
+                <input
+                  class="passform__input__includeLetters"
+                  type="checkbox"
+                />
+                <span class="passform__check"></span>
+              </label>
+              <label class="passform__chboxes__container" for="">
+                Include upper case letters A, B, C, D, E
+                <input
+                  class="passform__input__includeUpperCase"
+                  type="checkbox"
+                  disabled
+                />
+                <span class="passform__check"></span>
+              </label>
+              <label class="passform__chboxes__container" for="">
+                Include special symbols !@#$%^&*(_-+/.>\<>)
+                <input
+                  class="passform__input__includeSpecialSym"
+                  type="checkbox"
+                />
+                <span class="passform__check"></span>
+              </label>
+            </div>
+          </div>
+          <div class="passform__btns__wrapper">
+            <button class="passform__btn passform__generate">Generate</button>
+            <button class="passform__btn passform__copy">Copy</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="src/js/index.js"></script>
+  </body>
+</html>
